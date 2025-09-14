@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Web Development Notes — How the Internet Works</title>
+</head>
+<body bgcolor="#f9f9f9" text="#000000" link="#003366" vlink="#660033" alink="#ff0000">
+  <header align="center" bgcolor="#003366">
+    <h1><font color="#003366">📘 Web Development Course — Notes</font></h1>
+    <p><font color="#555555"><em>A professional educational notes website explaining how the Internet works.</em></font></p>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="index.html">Introduction</a></td>
+          <td><a href="first.html">HTML Heading</a></td>
+          <td><a href="third.html">HTML List</a></td>
+          <td><a href="forth.html">File Path</a></td>
+          <td><a href="last.html">Media</a></td>
+        </tr>
+      </table>
+    </nav>
+    <br>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="#toc">Table of Contents</a></td>
+          <td><a href="#principles">Principles</a></td>
+          <td><a href="#ip">IP Address</a></td>
+          <td><a href="#ipv6">IPv6</a></td>
+          <td><a href="#mac">MAC Address</a></td>
+          <td><a href="#ports">Ports</a></td>
+          <td><a href="#dns">DNS</a></td>
+          <td><a href="#summary">Summary</a></td>
+        </tr>
+      </table>
+    </nav>
+    <hr color="#003366" size="3">
+  </header>
+
+  <section id="diagram" align="center">
+    <h2><font color="#003366">Reference Diagram</font></h2>
+    <img src="network.png" alt="Network diagram" width="50" ><br>
+    <a href="Untitled-2025-08-19-2016.png">Open Diagram Separately</a>
+    <hr color="#999999">
+  </section>
+
+  <section id="toc">
+    <h2><font color="#003366">Table of Contents</font></h2>
+    <ol type="I">
+      <li><a href="#principles">How the Internet Works</a></li>
+      <li><a href="#ip">IP Address (IPv4)</a></li>
+      <li><a href="#ipv6">IPv6</a></li>
+      <li><a href="#mac">MAC Address</a></li>
+      <li><a href="#ports">Port Numbers</a></li>
+      <li><a href="#dns">DNS (Domain Name System)</a></li>
+      <li><a href="#summary">Short Summary</a></li>
+    </ol>
+    <hr color="#999999">
+  </section>
+
+  <section id="principles">
+    <h2><font color="#003366">How the Internet Works — First Principles</font></h2>
+    <h3><font color="#006600">Principle 1 — Sharing Information</font></h3>
+    <p>Two computers exchange data using a direct link. This is the simplest form of networking.</p>
+
+    <h3><font color="#006600">Principle 2 — Scaling</font></h3>
+    <p>Many devices require a <strong>Switch</strong> for a local network.</p>
+
+    <h3><font color="#006600">Principle 3 — Connecting Networks</font></h3>
+    <p><strong>Routers</strong> connect multiple networks, forming the Internet (a network of networks).</p>
+
+    <h3><font color="#006600">Principle 4 — Addressing</font></h3>
+    <p><strong>IP addresses</strong> uniquely identify devices across networks.</p>
+
+    <h3><font color="#006600">Principle 5 — Reliability</font></h3>
+    <p>Data is split into <strong>packets</strong> and reassembled by protocols like TCP/IP.</p>
+    <hr color="#999999">
+  </section>
+
+  <section id="ip">
+    <h2><font color="#003366">IP Address (IPv4)</font></h2>
+    <p><strong>IPv4</strong> is 32-bit, written in dotted decimal (e.g., <code>172.217.16.142</code>). Total addresses: ~4.3 billion.</p>
+
+    <h3><font color="#006600">Public vs Private IP</font></h3>
+    <table border="1" cellpadding="6" cellspacing="0" bgcolor="#ffffe6">
+      <tr bgcolor="#cccccc">
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Public IP</td>
+        <td>Globally unique, assigned by ISP, used for Internet communication.</td>
+      </tr>
+      <tr>
+        <td>Private IP</td>
+        <td>Used inside local networks only. Common ranges:
+          <ul>
+            <li>10.0.0.0 – 10.255.255.255</li>
+            <li>172.16.0.0 – 172.31.255.255</li>
+            <li>192.168.0.0 – 192.168.255.255</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <hr color="#999999">
+  </section>
+
+  <section id="ipv6">
+    <h2><font color="#003366">IPv6</font></h2>
+    <p>IPv6 uses 128-bit addresses, written in hexadecimal with colons. Example:</p>
+    <pre bgcolor="#f0f0f0">2001:0db8:85a3:0000:0000:8a2e:0370:7334</pre>
+    <p>Supports ~340 undecillion unique addresses.</p>
+    <hr color="#999999">
+  </section>
+
+  <section id="mac">
+    <h2><font color="#003366">MAC Address</font></h2>
+    <p>A permanent hardware ID, 48 bits, shown in hex (e.g., <code>3C:22:FB:A3:B4:C5</code>).</p>
+    <h3><font color="#006600">Finding MAC Address</font></h3>
+    <ul>
+      <li><strong>Windows:</strong> Run <code>ipconfig /all</code> or <code>getmac /v</code>.</li>
+      <li><strong>macOS:</strong> Run <code>ifconfig</code> in Terminal.</li>
+    </ul>
+    <hr color="#999999">
+  </section>
+
+  <section id="ports">
+    <h2><font color="#003366">Port Numbers</font></h2>
+    <p>Ports identify services. Range: 0–65535. Categories:</p>
+    <ul>
+      <li><strong>Well-known (0–1023):</strong> HTTP (80), HTTPS (443), SSH (22).</li>
+      <li><strong>Registered (1024–49151):</strong> MySQL (3306), PostgreSQL (5432), MongoDB (27017), Node/React Dev (3000).</li>
+      <li><strong>Dynamic/Ephemeral (49152–65535):</strong> Temporary client ports.</li>
+    </ul>
+    <hr color="#999999">
+  </section>
+
+  <section id="dns">
+    <h2><font color="#003366">DNS — Domain Name System</font></h2>
+    <p>DNS translates human-readable domains to IP addresses.</p>
+    <h3><font color="#006600">Steps</font></h3>
+    <ol>
+      <li>Check local caches (browser, OS, router).</li>
+      <li>Ask recursive resolver (ISP or public DNS).</li>
+      <li>Root servers point to TLD servers.</li>
+      <li>TLD servers point to authoritative name servers.</li>
+      <li>Authoritative server returns the final IP.</li>
+    </ol>
+    <p>Finally, the browser connects to the IP on the correct port (e.g., 443 for HTTPS).</p>
+    <hr color="#999999">
+  </section>
+
+  <section id="summary">
+    <h2><font color="#003366">Short Summary</font></h2>
+    <ul>
+      <li>Internet = networks connected via routers.</li>
+      <li>IPv4 = 32-bit; IPv6 = 128-bit.</li>
+      <li>MAC addresses = hardware IDs.</li>
+      <li>Ports = service identifiers.</li>
+      <li>DNS = translates names into IP addresses.</li>
+    </ul>
+  </section>
+
+  <footer align="center" bgcolor="#003366">
+    <hr color="#003366" size="3">
+    <p><font color="#333333">📖 Created as a professional HTML-only educational notes website. No CSS or JavaScript used.</font></p>
+  </footer>
+</body>
+</html>

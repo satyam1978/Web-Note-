@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Tutorial — Hyper Text Markup Language</title>
+</head>
+<body bgcolor="#f9f9f9" text="#000000" link="#003366" vlink="#660033" alink="#ff0000">
+
+  <header align="center" bgcolor="#003366">
+    <h1><font color="#003366">📄 HTML Tutorial — Hyper Text Markup Language</font></h1>
+    <p><font color="black"><em>Learn HTML basics and essential tags for web development.</em></font></p>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="index.html">Introduction</a></td>
+          <td><a href="first.html">HTML Heading</a></td>
+          <td><a href="third.html">HTML List</a></td>
+          <td><a href="forth.html">File Path</a></td>
+          <td><a href="last.html">Media</a></td>
+        </tr>
+      </table>
+    </nav>
+    <br>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="#intro">Introduction</a></td>
+          <td><a href="#install">Install Software</a></td>
+          <td><a href="#headings">Headings</a></td>
+          <td><a href="#paragraphs">Paragraphs</a></td>
+          <td><a href="#hr-br">HR & BR</a></td>
+          <td><a href="#lists">Lists</a></td>
+          <td><a href="#anchors">Anchor Tag</a></td>
+          <td><a href="#images">Image Tag</a></td>
+        </tr>
+      </table>
+    </nav>
+    <hr color="#003366" size="3">
+  </header>
+
+  <section id="intro">
+    <h2><font color="#003366">HTML: Hyper Text Markup Language</font></h2>
+    <p>HTML stands for <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. It is the standard language used to create and structure the content of a webpage.</p>
+    <ul>
+      <li><strong>HyperText:</strong> This refers to the ability to create links that connect web pages to one another, making the web a connected "web" of information.</li>
+      <li><strong>Markup Language:</strong> This means you use "tags" to surround your content, giving that content meaning and structure. You are "marking up" a plain text document.</li>
+    </ul>
+    <p>First Website: <a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">https://info.cern.ch/hypertext/WWW/TheProject.html</a></p>
+    <hr color="#999999">
+  </section>
+
+  <section id="install">
+    <h2><font color="#003366">Install Required Software</font></h2>
+    <h3>1. Install Visual Studio Code</h3>
+    <p>This is a free piece of software from Microsoft that you will use to write your code.</p>
+    <p><a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></p>
+    <h3>2. Install Visual Studio Code Extensions</h3>
+    <ul>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server" target="_blank">Live Preview</a></li>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a></li>
+      <li>Live Server</li>
+    </ul>
+    <hr color="#999999">
+  </section>
+
+  <section id="headings">
+    <h2><font color="#003366">1: The Heading (&lt;h1&gt; to &lt;h6&gt;)</font></h2>
+    <p><strong>What it is:</strong> Headings are tags used to define titles and subtitles on your page. They are crucial for creating a logical hierarchy and outline for your content.</p>
+    <pre bgcolor="#f0f0f0">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+    </pre>
+    <ul>
+      <li>&lt;h1&gt;: The most important heading, typically used only once per page for the main title.</li>
+      <li>&lt;h2&gt;: A major section heading.</li>
+      <li>&lt;h3&gt;: A sub-section heading under an &lt;h2&gt;.</li>
+      <li>...and so on, down to &lt;h6&gt;, the least important heading.</li>
+    </ul>
+    <p><strong>The Purpose:</strong> To structure your document in a way that is understandable to both humans and machines (like search engines and screen readers). It is <strong>not</strong> just for making text big; it is for giving the text structural importance.</p>
+    <hr color="#999999">
+  </section>
+
+  <section id="paragraphs">
+    <h2><font color="#003366">2: The Paragraph (&lt;p&gt;)</font></h2>
+    <p><strong>What it is:</strong> The paragraph tag is the most common tag you'll use. It's for grouping sentences and blocks of text together.</p>
+    <p><strong>The Tag:</strong> &lt;p&gt;</p>
+    <p><strong>The Purpose:</strong> To define a distinct paragraph of text. Browsers automatically add a little bit of space before and after a &lt;p&gt; element, separating it from other content. You should not use multiple line breaks; you should use multiple &lt;p&gt; tags.</p>
+    <pre bgcolor="#f0f0f0">
+<p>This is the first paragraph. It contains several sentences about a topic.</p>
+<p>This is a second, separate paragraph. The browser will display it with a space between it and the first one.</p>
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <section id="hr-br">
+    <h2><font color="#003366">3: HTML Horizontal Rules & Line Breaks</font></h2>
+    <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, often displayed as a horizontal line:</p>
+    <pre bgcolor="#f0f0f0">
+<p>This is the first topic.</p>
+<hr />
+<p>This is a completely different topic.</p>
+    </pre>
+    <p>Line Break (&lt;br&gt;) forces text onto the next line:</p>
+    <pre bgcolor="#f0f0f0">
+<p>221B Baker Street<br>
+London, England</p>
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <section id="lists">
+    <h2><font color="#003366">4: List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</font></h2>
+    <p><strong>What it is:</strong> These tags are used to create lists. This is a perfect example of nesting.</p>
+    <ul>
+      <li>&lt;ul&gt;: An <strong>U</strong>nordered <strong>L</strong>ist. Creates bullets.</li>
+      <li>&lt;ol&gt;: An <strong>O</strong>rdered <strong>L</strong>ist. Creates numbers.</li>
+      <li>&lt;li&gt;: A <strong>L</strong>ist <strong>I</strong>tem. Each item in either type of list must be wrapped in an &lt;li&gt; tag.</li>
+    </ul>
+    <p><strong>The Purpose:</strong> To group related items together in a list format.</p>
+    <pre bgcolor="#f0f0f0">
+<ul>
+  <li>Tea Bag</li>
+  <li>Water</li>
+  <li>Sugar</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>First, boil the water in a kettle.</li>
+  <li>Add tea bag, sugar and milk into it</li>
+  <li>Keep boiling it for 5 minutes </li>
+  <li>Serve the tea by pouring it into cup</li>
+</ol>
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <section id="anchors">
+    <h2><font color="#003366">5: The Anchor Tag (&lt;a&gt;)</font></h2>
+    <p><strong>What it is:</strong> The Anchor tag creates hyperlinks to webpages, files, or locations on the page.</p>
+    <pre bgcolor="#f0f0f0">
+<a href="https://www.coderarmy.in/">Vist Coder Army</a>
+    </pre>
+    <p>Target attribute:</p>
+    <ul>
+      <li>_self - Default. Opens in the same window/tab.</li>
+      <li>_blank - Opens in a new window/tab.</li>
+    </ul>
+    <hr color="#999999">
+  </section>
+
+  <section id="images">
+    <h2><font color="#003366">6: The Image Tag (&lt;img&gt;)</font></h2>
+    <p><strong>What it is:</strong> The Image tag is a self-closing tag used to embed images.</p>
+    <p><strong>The Tag:</strong> &lt;img&gt;</p>
+    <p><strong>The Purpose:</strong> Displays an image; requires <strong>src</strong> and <strong>alt</strong> attributes.</p>
+    <pre bgcolor="#f0f0f0">
+<img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="300px" width="300px" alt="This is Dog Photo">
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <footer align="center" bgcolor="#003366">
+    <hr color="#003366" size="3">
+    <p><font color="#003366">📖 Created as a professional HTML-only tutorial website. All original content preserved.</font></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Day03 Notes</title>
+</head>
+<body bgcolor="#f9f9f9" text="#000000" link="#003366" vlink="#660033" alink="#ff0000">
+
+  <!-- Header Section -->
+  <header align="center" bgcolor="#003366">
+    <h1><font color="#003366">📄 HTML — List</font></h1>
+    <p><font color="black"><em>Learn about File Paths, Relative & Absolute Paths, and System Differences.</em></font></p>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="index.html">Introduction</a></td>
+          <td><a href="first.html">HTML Heading</a></td>
+          <td><a href="third.html">HTML List</a></td>
+          <td><a href="forth.html">File Path</a></td>
+          <td><a href="last.html">Media</a></td>
+        </tr>
+      </table>
+    </nav>
+    <br>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="#filepath">File Path System</a></td>
+          <td><a href="#relative">Relative Paths</a></td>
+          <td><a href="#absolute">Absolute Paths</a></td>
+          <td><a href="#windows">Windows Path</a></td>
+          <td><a href="#maclinux">macOS / Linux Path</a></td>
+          <td><a href="#summary">Summary</a></td>
+        </tr>
+      </table>
+    </nav>
+    <hr color="#003366" size="3">
+  </header>
+
+  <!-- File Path System Section -->
+  <section id="filepath">
+    <h2><font color="#003366">File Path System</font></h2>
+    <h3>Step 1: The First Principle (The Fundamental Truth)</h3>
+    <p>The most fundamental truth is this: <strong>A website is not one single file.</strong></p>
+    <p>It's a collection of different files (HTML, CSS, JavaScript, images, videos, fonts) that all need to work together. These files are organized into folders, just like documents on your computer.</p>
+    <h3>Step 2: The Core Problem</h3>
+    <p>Now we have a core problem: If your <code>index.html</code> file needs to display an image named <code>logo.png</code>, how does the HTML file tell the browser where to <strong>find</strong> it?</p>
+    <p>You can't just say <code>src="logo.png"</code> and expect it to work every time. What if the logo is in an <code>images</code> folder? What if it's on a completely different website?</p>
+    <p>The browser needs an exact, unambiguous address to locate the file. <strong>A file path is that address.</strong></p>
+    <hr color="#999999">
+  </section>
+
+  <!-- Relative Paths Section -->
+  <section id="relative">
+    <h2><font color="#003366">A) Relative File Paths</font></h2>
+    <p>A relative file path gives directions to a file <strong>starting from the location of the file you are currently in</strong>. You will use this 99% of the time for linking your own files together (images, CSS, other HTML pages).</p>
+    <pre bgcolor="#f0f0f0">
+my-website/
+├── index.html
+├── about.html
+│
+├── images/
+│   ├── logo.png
+│   └── hero.jpg
+│
+└── pages/
+    ├── contact.html
+    └── terms.html
+    </pre>
+
+    <h4>Scenario 1: Linking to a file in the SAME folder</h4>
+    <pre bgcolor="#f0f0f0">
+<!-- This code is inside index.html -->
+<a href="about.html">About Us</a>
+    </pre>
+
+    <h4>Scenario 2: Linking to a file in a SUB-FOLDER (Going Down)</h4>
+    <pre bgcolor="#f0f0f0">
+<!-- This code is inside index.html -->
+<img src="images/logo.png" alt="My Website Logo">
+    </pre>
+
+    <h4>Scenario 3: Linking to a file in a PARENT FOLDER (Going Up)</h4>
+    <pre bgcolor="#f0f0f0">
+<!-- This code is inside pages/contact.html -->
+<img src="../images/logo.png" alt="My Website Logo">
+    </pre>
+    <p>- <code>../</code> takes you from pages/ up to my-website/.</p>
+    <p>- <code>images/logo.png</code> then takes you down into the images folder to find the file.</p>
+    <hr color="#999999">
+  </section>
+
+  <!-- Absolute Paths Section -->
+  <section id="absolute">
+    <h2><font color="#003366">B) Absolute File Paths</font></h2>
+    <p>An absolute file path gives the <strong>full, complete URL</strong> to a resource on the web. It starts with <code>http://</code> or <code>https://</code>.</p>
+    <ul>
+      <li>Linking to another website.</li>
+      <li>Using a font from Google Fonts.</li>
+      <li>Using an image from an image-hosting service.</li>
+    </ul>
+    <p>Example:</p>
+    <pre bgcolor="#f0f0f0">
+<!-- Linking to an external website -->
+<a href="https://www.google.com">Search on Google</a>
+
+<!-- Using an image hosted on another server -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Html5_logo_and_wordmark.svg" alt="HTML5 Logo">
+    </pre>
+    <h3>The Critical "Why": Why not use absolute paths for your own files?</h3>
+    <pre bgcolor="#f0f0f0">
+src="C:/Users/Arjun/Desktop/my-website/images/logo.png"
+    </pre>
+    <p><strong>This is a major mistake.</strong> This address only works on <em>your</em> computer. Once you upload your website to a server, the image will break.</p>
+    <hr color="#999999">
+  </section>
+
+  <!-- Windows Paths Section -->
+  <section id="windows">
+    <h2><font color="#003366">Absolute Path in Windows</font></h2>
+    <p>The Windows file system is organized into separate drives, each identified by a letter (C:, D:, etc.).</p>
+    <ul>
+      <li><strong>Starting Point (The Root):</strong> Always starts with a drive letter and colon, like C:\</li>
+      <li><strong>Directory Separator:</strong> Uses backslash (\)</li>
+    </ul>
+    <p>Example:</p>
+    <pre bgcolor="#f0f0f0">
+C:\Users\JohnDoe\Documents\report.docx
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <!-- macOS / Linux Paths Section -->
+  <section id="maclinux">
+    <h2><font color="#003366">Absolute Path in macOS / Linux</font></h2>
+    <p>macOS (and Linux) has a single, unified file system.</p>
+    <ul>
+      <li><strong>Starting Point (The Root):</strong> Starts with a single forward slash /</li>
+      <li><strong>Directory Separator:</strong> Forward slash (/)</li>
+    </ul>
+    <p>Example:</p>
+    <pre bgcolor="#f0f0f0">
+/Users/johndoe/Documents/report.docx
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2><font color="#003366">Summary of Key Differences</font></h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr>
+        <th>Feature</th>
+        <th>Windows</th>
+        <th>macOS / Linux</th>
+      </tr>
+      <tr>
+        <td>Starting Point (Root)</td>
+        <td>Drive Letter (e.g., C:\)</td>
+        <td>Single forward slash (/)</td>
+      </tr>
+      <tr>
+        <td>Directory Separator</td>
+        <td>Backslash (\)</td>
+        <td>Forward Slash (/)</td>
+      </tr>
+      <tr>
+        <td>Example</td>
+        <td>C:\Users\JohnDoe\Documents\report.docx</td>
+        <td>/Users/johndoe/Documents/report.docx</td>
+      </tr>
+    </table>
+    <hr color="#999999">
+  </section>
+
+  <section id="diagram" align="center">
+    <h2><font color="#003366">Reference Diagram</font></h2>
+    <img src="folder.png" alt="Network diagram" width="50" ><br>
+    <a href="d4.png">Open Diagram Separately</a>
+    <hr color="#999999">
+  </section>
+
+  <!-- Footer -->
+  <footer align="center" bgcolor="#003366">
+    <hr color="#003366" size="3">
+    <p><font color="#003366">📖 Professional HTML Day03 Notes Website. All original content preserved.</font></p>
+  </footer>
+
+</body>
+</html>

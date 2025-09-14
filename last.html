@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Media — Notes</title>
+</head>
+<body bgcolor="#f9f9f9" text="#000000" link="#003366" vlink="#660033" alink="#ff0000">
+
+  <header align="center" bgcolor="#003366">
+    <h1><font color="#003366">🎬 HTML Media — Notes</font></h1>
+    <p><font color="black"><em>Learn how to embed video, audio, and other media in HTML pages.</em></font></p>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="index.html">Introduction</a></td>
+          <td><a href="first.html">HTML Heading</a></td>
+          <td><a href="third.html">HTML List</a></td>
+          <td><a href="forth.html">File Path</a></td>
+          <td><a href="last.html">Media</a></td>
+        </tr>
+      </table>
+    </nav>
+    <br>
+    <nav>
+      <table border="1" cellpadding="8" cellspacing="0" align="center" bgcolor="#e6f2ff">
+        <tr>
+          <td><a href="#intro">Introduction</a></td>
+          <td><a href="#video">Video</a></td>
+          <td><a href="#audio">Audio</a></td>
+          <td><a href="#advanced">Advanced</a></td>
+          <td><a href="#copyright">Copyright</a></td>
+        </tr>
+      </table>
+    </nav>
+    <hr color="#003366" size="3">
+  </header>
+
+  <section id="intro">
+    <h2><font color="#003366">HTML Media — Introduction</font></h2>
+    <p>Web pages are more than just text and images. To make them interactive and engaging, you need to embed audio and video in a standardized, plugin-free way.</p>
+    <p>Browsers now support native HTML5 <strong>&lt;video&gt;</strong> and <strong>&lt;audio&gt;</strong> tags for this purpose.</p>
+    <hr color="#999999">
+  </section>
+
+  <section id="video">
+    <h2><font color="#003366">1: Video Tag Basics</font></h2>
+    <p>The simplest video tag:</p>
+    <pre bgcolor="#f0f0f0">
+&lt;video src="my-awesome-video.mp4"&gt;&lt;/video&gt;
+    </pre>
+    <p>Add controls for a functional player:</p>
+    <pre bgcolor="#f0f0f0">
+&lt;video src="my-awesome-video.mp4" controls&gt;&lt;/video&gt;
+    </pre>
+    <p>You can add width, height, autoplay, loop, and poster attributes:</p>
+    <pre bgcolor="#f0f0f0">
+&lt;video src="video.mp4" width="640" height="360" controls autoplay muted loop poster="images/video-thumbnail.jpg"&gt;&lt;/video&gt;
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <section id="audio">
+    <h2><font color="#003366">2: Audio Tag</font></h2>
+    <p>Embed audio files with the <strong>&lt;audio&gt;</strong> tag:</p>
+    <pre bgcolor="#f0f0f0">
+&lt;p&gt;Listen to our theme song:&lt;/p&gt;
+&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;
+    </pre>
+    <p>Supports the same attributes as &lt;video&gt;: autoplay, loop, muted.</p>
+    <hr color="#999999">
+  </section>
+
+  <section id="advanced">
+    <h2><font color="#003366">3: Advanced & Professional Usage</font></h2>
+    <h3>Multiple Video Formats with &lt;source&gt;</h3>
+    <pre bgcolor="#f0f0f0">
+&lt;video controls poster="images/thumbnail.jpg"&gt;
+  &lt;source src="videos/my-video.webm" type="video/webm"&gt;
+  &lt;source src="videos/my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;
+    </pre>
+    <h3>Adding Subtitles with &lt;track&gt;</h3>
+    <pre bgcolor="#f0f0f0">
+&lt;video controls&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+&lt;/video&gt;
+    </pre>
+    <h3>Simple Direct Method</h3>
+    <pre bgcolor="#f0f0f0">
+&lt;video src="a.mp4" controls&gt;&lt;/video&gt;
+    </pre>
+    <hr color="#999999">
+  </section>
+
+  <section id="copyright">
+    <h2><font color="#003366">4: Copyright Symbols in HTML</font></h2>
+    <p>Two ways to display ©:</p>
+    <pre bgcolor="#f0f0f0">
+&lt;footer&gt;
+    &lt;p&gt;Copyright &amp;copy; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright &#169; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+&lt;/footer&gt;
+    </pre>
+    <p>Other symbols:</p>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr>
+        <th>Symbol</th><th>Description</th><th>Entity Name</th><th>Entity Number</th>
+      </tr>
+      <tr><td>©</td><td>Copyright</td><td>&amp;copy;</td><td>&#169;</td></tr>
+      <tr><td>®</td><td>Registered Trademark</td><td>&amp;reg;</td><td>&#174;</td></tr>
+      <tr><td>™</td><td>Trademark</td><td>&amp;trade;</td><td>&#8482;</td></tr>
+      <tr><td>&lt;</td><td>Less-than</td><td>&amp;lt;</td><td>&#60;</td></tr>
+      <tr><td>&gt;</td><td>Greater-than</td><td>&amp;gt;</td><td>&#62;</td></tr>
+      <tr><td>&amp;</td><td>Ampersand</td><td>&amp;amp;</td><td>&#38;</td></tr>
+      <tr><td>"</td><td>Double Quote</td><td>&amp;quot;</td><td>&#34;</td></tr>
+      <tr><td>€</td><td>Euro</td><td>&amp;euro;</td><td>&#8364;</td></tr>
+    </table>
+    <hr color="#999999">
+  </section>
+
+  <footer align="center" bgcolor="#003366">
+    <hr color="#003366" size="3">
+    <p><font color="#003366">📖 Created as a professional HTML-only media tutorial website. All original content preserved.</font></p>
+  </footer>
+
+</body>
+</html>
